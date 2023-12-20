@@ -14,6 +14,18 @@ pnpm dev
 bun dev
 ```
 
+## Version
+```
+nextjs : 14
+react : 18
+```
+
+## 프로젝트 개요
+```
+1. Next.js 공식 사이트의 Documentation 에서 nextjs를 배우기 위해 반드는 앱.
+2. 블로그 포스트 내용은 md 파일로 작성.
+```
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
