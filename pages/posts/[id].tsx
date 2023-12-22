@@ -2,7 +2,7 @@ import React from 'react';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Head from 'next/head';
 import { getAllPostIds, getPostData } from '@/lib/posts';
-import homeStyles from '@/styles/Home.module.css';
+import homeStyles from '@/styles/Post.module.css';
 
 const Post = ({
   postData,
@@ -11,7 +11,7 @@ const Post = ({
 }) => {
   console.log('postData', postData);
   return (
-    <div>
+    <div className={homeStyles.container}>
       <Head>
         <title>{postData.title}</title>
       </Head>
@@ -38,6 +38,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
+/** 컴포넌트 내 props 정보 가져오기 */
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const postData = await getPostData(params.id as string);
   return {
