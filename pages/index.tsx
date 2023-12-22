@@ -1,6 +1,5 @@
 import { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
-import Link from 'next/link';
 import Image from 'next/image';
 import { Inter } from 'next/font/google';
 import homeStyles from '@/styles/Home.module.css';
@@ -31,7 +30,7 @@ const Home = ({
         <ul className={homeStyles.list}>
           {allPostsData.map(({ id, title, date }) => (
             <li className={homeStyles.listItem} key={id}>
-              <Link href={`/posts/${id}`}>{title}</Link>
+              <a>{title}</a>
               <br />
               <small className={homeStyles.lightText}>{date}</small>
             </li>
